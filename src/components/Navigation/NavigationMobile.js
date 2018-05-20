@@ -85,7 +85,14 @@ class NavigationMobile extends Component {
       </MenuHeaderStyled>
       <MenuContentStyled>
         {LOCATIONS.map(({ target, text }) => (
-          <Link to={target} smooth duration={500} offset={-60} onClick={this.toggleMenu}>
+          <Link
+            key={target}
+            to={target}
+            smooth
+            duration={500}
+            offset={-60}
+            onClick={this.toggleMenu}
+          >
             <MenuItemStyled key={target} target={target}>
               {text}
             </MenuItemStyled>

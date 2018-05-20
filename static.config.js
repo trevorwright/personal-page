@@ -1,5 +1,6 @@
-import React from 'react';
-import { ServerStyleSheet } from 'styled-components';
+/* eslint-disable react/prop-types */
+import React, { Component } from 'react'
+import { ServerStyleSheet } from 'styled-components'
 
 export default {
   getSiteData: () => ({
@@ -36,26 +37,29 @@ export default {
       },
     ],
   renderToHtml: (render, Comp, meta) => {
-    const sheet = new ServerStyleSheet();
-    const html = render(sheet.collectStyles(<Comp />));
+    const sheet = new ServerStyleSheet()
+    const html = render(sheet.collectStyles(<Comp />))
     // eslint-disable-next-line
-    meta.styleTags = sheet.getStyleElement();
-    return html;
+    meta.styleTags = sheet.getStyleElement()
+    return html
   },
-  Document: () => {
-    const {
-      Html, Head, Body, children, renderMeta,
-    } = this.props;
+  // eslint-disable-next-line
+  Document: class CustomHtml extends Component {
+    render() {
+      const {
+        Html, Head, Body, children, renderMeta,
+      } = this.props
 
-    return (
-      <Html>
-        <Head>
-          <meta charSet="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          {renderMeta.styleTags}
-        </Head>
-        <Body>{children}</Body>
-      </Html>
-    );
+      return (
+        <Html>
+          <Head>
+            <meta charSet="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            {renderMeta.styleTags}
+          </Head>
+          <Body>{children}</Body>
+        </Html>
+      )
+    }
   },
-};
+}
