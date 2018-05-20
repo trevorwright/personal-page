@@ -1,3 +1,7 @@
 module.exports = {
-  extends: 'react-tools'
-}
+  extends: 'airbnb',
+  rules: {
+    'react/jsx-filename-extension': 0,
+    semi: 0,
+  },
+};
