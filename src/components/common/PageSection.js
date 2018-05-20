@@ -1,5 +1,5 @@
 import React from 'react'
-import { node, bool } from 'prop-types'
+import { node, bool, string } from 'prop-types'
 import styled, { css } from 'styled-components'
 
 import { media } from '../../styles'
@@ -24,11 +24,13 @@ const PageSection = ({ children, ...rest }) => (
 
 PageSection.propTypes = {
   children: node.isRequired,
+  name: string,
   center: bool,
 }
 
 PageSection.defaultProps = {
   center: false,
+  name: undefined,
 }
 
 export default PageSection

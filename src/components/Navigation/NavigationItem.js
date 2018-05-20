@@ -1,6 +1,7 @@
 import React from 'react'
 import { string, node } from 'prop-types'
 import styled from 'styled-components'
+import { Link } from 'react-scroll'
 
 const NavigationItemStyled = styled.li`
   display: inline-block;
@@ -9,7 +10,9 @@ const NavigationItemStyled = styled.li`
 
 const NavigationItem = ({ children, target }) => (
   <NavigationItemStyled>
-    <a href={`#${target}`}>{children}</a>
+    <Link to={target} smooth duration={500} offset={-80}>
+      {children}
+    </Link>
   </NavigationItemStyled>
 )
 
