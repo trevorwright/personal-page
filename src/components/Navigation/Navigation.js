@@ -1,15 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { media } from '../../styles'
+
 import NavigationItem from './NavigationItem'
 
 const HeaderStyled = styled.header`
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   text-align: center;
+
+  ${media.small`
+    display: block;
+  `};
 `
 
 const NavigationStyled = styled.ul`

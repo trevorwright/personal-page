@@ -13,7 +13,7 @@ const HeroStyled = styled.div`
   background: url(${workspaceImage});
   background-size: cover;
   background-position: bottom;
-  height: 100vh;
+  height: 80vh;
   min-height: 500px;
   max-height: 1080px;
 
