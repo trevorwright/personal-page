@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { media } from '../../styles'
+
 import NamePlate from './NamePlate'
 
 import workspaceImage from '../../../assets/images/workspace.jpg'
@@ -12,7 +14,8 @@ const HeroStyled = styled.div`
   align-items: center;
   background: url(${workspaceImage});
   background-size: cover;
-  background-position: bottom;
+  background-position: -90px -200px;
+  background-attachment: fixed;
   height: 80vh;
   min-height: 500px;
   max-height: 1080px;
@@ -27,6 +30,10 @@ const HeroStyled = styled.div`
     background: #01579b;
     opacity: 0.8;
   }
+
+  ${media.small`
+    background-position: bottom;
+  `};
 `
 
 const NamePlatedStyled = styled(NamePlate)`
