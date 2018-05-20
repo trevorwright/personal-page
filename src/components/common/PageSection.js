@@ -2,6 +2,8 @@ import React from 'react'
 import { node, bool } from 'prop-types'
 import styled, { css } from 'styled-components'
 
+import { media } from '../../styles'
+
 const PageSectionStyled = styled.section`
   margin: 20px;
 
@@ -9,6 +11,10 @@ const PageSectionStyled = styled.section`
     props.center &&
     css`
       text-align: center;
+    `};
+
+  ${media.small`
+      margin: 20px 40px;
     `};
 `
 

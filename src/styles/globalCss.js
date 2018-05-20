@@ -110,7 +110,7 @@ const globalCssReset = css`
   }
 
   body {
-    line-height: 1;
+    line-height: 1.5;
   }
 
   ol,

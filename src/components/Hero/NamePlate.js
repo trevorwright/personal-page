@@ -11,7 +11,6 @@ const NameStyled = styled.h1`
   font-size: 2em;
   font-weight: 700;
   color: #fff;
-  line-height: 1.5em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 
@@ -22,14 +21,12 @@ const NameStyled = styled.h1`
 
 const TitleStyled = styled.h3`
   font-size: 1.5em;
-  line-height: 1.5em;
   color: #bbdefb;
   font-weight: 500;
   letter-spacing: 0.05em;
 
   ${media.small`
-
-  font-size: 2.5em;
+    font-size: 2.5em;
   `};
 `
 

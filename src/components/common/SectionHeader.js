@@ -8,6 +8,7 @@ const SectionHeaderStyled = styled.h2`
   position: relative;
   display: inline-block;
   padding: 8px 0;
+  margin-bottom: 20px;
   font-size: 1.5em;
   font-weight: 300;
 
@@ -25,6 +26,7 @@ const SectionHeaderStyled = styled.h2`
 
   ${media.small`
     font-size: 2em;
+    margin-bottom: 40px;
   `};
 `
 
