@@ -11,7 +11,7 @@ export default withSiteData(() => (
   <div>
     <Navigation />
     <Hero />
-    <PageSection name="about" center>
+    <PageSection name="about">
       <SectionHeader>About Me</SectionHeader>
       <ImageBlurb image={trevorImage} alt="Profile Image of Trevor Wright">
         <p>
@@ -34,6 +34,9 @@ export default withSiteData(() => (
           placerat facilisis, dictum penatibus massa vel lorem nulla ornare vehicula.
         </p>
       </ImageBlurb>
+    </PageSection>
+    <PageSection name="experience">
+      <SectionHeader>Experience</SectionHeader>
     </PageSection>
   </div>
 ))

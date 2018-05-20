@@ -1,5 +1,5 @@
 import React from 'react'
-import { node, bool, string, oneOf } from 'prop-types'
+import { node, string, oneOf } from 'prop-types'
 import styled, { css } from 'styled-components'
 
 import { media } from '../../styles'
@@ -16,16 +16,11 @@ const THEMES = {
 const PageSectionStyled = styled.section`
   padding: 20px;
   border-bottom: 1px solid #dcd9d9;
+  text-align: center;
 
   ${props => css`
     background: ${THEMES[props.theme].background};
   `};
-
-  ${props =>
-    props.center &&
-    css`
-      text-align: center;
-    `};
 
   ${media.small`
       padding: 20px 40px;
@@ -39,12 +34,10 @@ const PageSection = ({ children, ...rest }) => (
 PageSection.propTypes = {
   children: node.isRequired,
   name: string,
-  center: bool,
   theme: oneOf(['default', 'alt']),
 }
 
 PageSection.defaultProps = {
-  center: false,
   name: undefined,
   theme: 'default',
 }
