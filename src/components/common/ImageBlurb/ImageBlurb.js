@@ -11,6 +11,7 @@ const ImageBlurbStyled = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 1024px;
+  margin: 0 auto;
 
   ${media.small`
     flex-direction: row;

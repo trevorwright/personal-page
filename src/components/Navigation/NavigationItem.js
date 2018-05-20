@@ -10,7 +10,7 @@ const NavigationItemStyled = styled.li`
 
 const NavigationItem = ({ children, target }) => (
   <NavigationItemStyled>
-    <Link to={target} smooth duration={500} offset={-80}>
+    <Link to={target} smooth duration={500} offset={-60}>
       {children}
     </Link>
   </NavigationItemStyled>

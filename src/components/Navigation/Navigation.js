@@ -30,14 +30,37 @@ const NavigationStyled = styled.ul`
   border-bottom-right-radius: 5px;
 `
 
+const LOCATIONS = [
+  {
+    text: 'About',
+    target: 'about',
+  },
+  {
+    text: 'Experience',
+    target: 'experience',
+  },
+  {
+    text: 'Education',
+    target: 'education',
+  },
+  {
+    text: 'Skills',
+    target: 'skills',
+  },
+  {
+    text: 'Contact',
+    target: 'contact',
+  },
+]
+
 const Navigation = () => (
   <HeaderStyled>
     <NavigationStyled>
-      <NavigationItem target="about">About</NavigationItem>
-      <NavigationItem target="experience">Experience</NavigationItem>
-      <NavigationItem target="education">Education</NavigationItem>
-      <NavigationItem target="skills">Skills</NavigationItem>
-      <NavigationItem target="contact">Contact</NavigationItem>
+      {LOCATIONS.map(({ text, target }) => (
+        <NavigationItem key={target} target={target}>
+          {text}
+        </NavigationItem>
+      ))}
     </NavigationStyled>
   </HeaderStyled>
 )
