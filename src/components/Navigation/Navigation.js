@@ -7,11 +7,11 @@ import NavigationItem from './NavigationItem'
 
 const HeaderStyled = styled.header`
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   text-align: center;
 
   ${media.small`

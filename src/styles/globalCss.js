@@ -159,5 +159,6 @@ export default css`
     font-family: ${SYSTEM_FONTS};
     font-size: 14px;
     background-color: #fff;
+    color: #424242;
   }
 `
