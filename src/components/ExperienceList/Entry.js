@@ -1,4 +1,5 @@
 import React from 'react'
+import { string } from 'prop-types'
 import styled from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faCodeBranch from '@fortawesome/fontawesome-free-solid/faCodeBranch'
@@ -106,25 +107,32 @@ const JobDescriptionStyled = styled.p`
   margin-top: 12px;
 `
 
-const Entry = () => (
+const Entry = ({
+  startDate, endDate, employer, title, description,
+}) => (
   <EntryStyled>
     <EntryIconStyled>
       <FontAwesomeIcon icon={faCodeBranch} color="#ffffff" size="lg" />
     </EntryIconStyled>
     <EntryDetailsStyled>
-      <DateRangeStyled>September 2016 - September 2017</DateRangeStyled>
+      <DateRangeStyled>
+        {startDate} - {endDate}
+      </DateRangeStyled>
       <EntryCardStyled>
-        <EmployerNameStyled>Prodigy Game</EmployerNameStyled>
-        <JobTitleStyled>Specialization Lead</JobTitleStyled>
-        <JobDescriptionStyled>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet tincidunt sem convallis
-          auctor senectus quam vestibulum eleifend litora elementum orci condimentum eget himenaeos
-          fames sed rhoncus nunc nisi euismod nisl lacinia tristique arcu mauris leo phasellus
-          maecenas dictum viverra vivamus
-        </JobDescriptionStyled>
+        <EmployerNameStyled>{employer}</EmployerNameStyled>
+        <JobTitleStyled>{title}</JobTitleStyled>
+        <JobDescriptionStyled>{description}</JobDescriptionStyled>
       </EntryCardStyled>
     </EntryDetailsStyled>
   </EntryStyled>
 )
+
+Entry.propTypes = {
+  startDate: string.isRequired,
+  endDate: string.isRequired,
+  employer: string.isRequired,
+  title: string.isRequired,
+  description: string.isRequired,
+}
 
 export default Entry
