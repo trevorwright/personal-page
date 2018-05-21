@@ -89,6 +89,8 @@ const DateRangeStyled = styled.div`
 const EntryCardStyled = styled.div`
   padding: 12px;
   background: #ffffff;
+  border: 1px solid #dcd9d9;
+  border-radius: 5px;
 
   ${media.medium`
     margin-left: 320px;

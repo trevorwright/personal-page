@@ -5,6 +5,7 @@ import { SectionHeader, PageSection, ImageBlurb } from '../components/common'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import ExperienceList from '../components/ExperienceList'
+import Education from '../components/Education'
 
 import trevorImage from '../../assets/images/trevor-wright.png'
 
@@ -57,6 +58,17 @@ export default withSiteData(() => (
           maecenas dictum viverra vivamus"
         />
       </ExperienceList>
+    </PageSection>
+    <PageSection name="education">
+      <SectionHeader>Education</SectionHeader>
+      <Education
+        school="Mohawk College"
+        startDate="January 2010"
+        endDate="December 2014"
+        topic="Software Engineering"
+        description="Lorem ipsum dolor sit amet consectetur adipiscing elit non primis cum nisi etiam magna
+      faucibus curabitur lectus mi malesuada ultrices."
+      />
     </PageSection>
   </div>
 ))
