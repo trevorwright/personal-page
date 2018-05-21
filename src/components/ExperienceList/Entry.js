@@ -72,9 +72,10 @@ const EntryDetailsStyled = styled.div`
   `};
 `
 
-const DateRangeStyled = styled.span`
+const DateRangeStyled = styled.div`
   color: #757575;
   font-weight: 300;
+  margin-bottom: 8px;
 
   ${media.medium`
     position: absolute;
