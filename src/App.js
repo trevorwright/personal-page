@@ -18,6 +18,12 @@ const AppStyles = styled.div`
     text-decoration: none;
     color: #1976d2;
     font-weight: bold;
+    cursor: pointer;
+
+    :hover {
+      color: #2196f3;
+      text-decoration: underline;
+    }
   }
 `
 
