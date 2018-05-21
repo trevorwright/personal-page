@@ -8,12 +8,12 @@ export const LOCATIONS = [
     target: 'experience',
   },
   {
-    text: 'Education',
-    target: 'education',
-  },
-  {
     text: 'Skills',
     target: 'skills',
+  },
+  {
+    text: 'Education',
+    target: 'education',
   },
   {
     text: 'Contact',

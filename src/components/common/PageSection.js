@@ -23,7 +23,7 @@ const PageSectionStyled = styled.section`
   `};
 
   ${media.small`
-      padding: 20px 40px;
+      padding: 40px;
     `};
 `
 

@@ -6,6 +6,7 @@ import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import ExperienceList from '../components/ExperienceList'
 import Education from '../components/Education'
+import Skills from '../components/Skills'
 
 import trevorImage from '../../assets/images/trevor-wright.png'
 
@@ -59,7 +60,11 @@ export default withSiteData(() => (
         />
       </ExperienceList>
     </PageSection>
-    <PageSection name="education">
+    <PageSection name="skills">
+      <SectionHeader>Skills</SectionHeader>
+      <Skills />
+    </PageSection>
+    <PageSection name="education" theme="alt">
       <SectionHeader>Education</SectionHeader>
       <Education
         school="Mohawk College"

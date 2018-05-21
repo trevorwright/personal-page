@@ -5,7 +5,7 @@ import { media } from '../../styles'
 
 import NamePlate from './NamePlate'
 
-import workspaceImage from '../../../assets/images/workspace-min.jpg'
+import workspaceImage from '../../../assets/images/workspace.jpg'
 
 const HeroStyled = styled.div`
   position: relative;
