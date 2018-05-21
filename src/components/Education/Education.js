@@ -44,7 +44,7 @@ const DescriptionContainerStyled = styled.div`
 `
 
 const Education = ({
-  school, startDate, endDate, topic, description,
+  school, startDate, endDate, topic, children,
 }) => (
   <EducationStyled>
     <SchoolNameStyled>{school}</SchoolNameStyled>
@@ -53,7 +53,7 @@ const Education = ({
     </DateRangeStyled>
     <TopicStyled>{topic}</TopicStyled>
     <DescriptionContainerStyled>
-      {typeof description === 'string' ? <p>{description}</p> : { description }}
+      {typeof children === 'string' ? <p>{children}</p> : children}
     </DescriptionContainerStyled>
   </EducationStyled>
 )
@@ -63,7 +63,7 @@ Education.propTypes = {
   startDate: string.isRequired,
   endDate: string.isRequired,
   topic: string.isRequired,
-  description: node.isRequired,
+  children: node.isRequired,
 }
 
 export default Education

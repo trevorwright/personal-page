@@ -7,9 +7,13 @@ const PersonalEducation = () => (
     startDate="January 2010"
     endDate="December 2014"
     topic="Software Engineering"
-    description="Lorem ipsum dolor sit amet consectetur adipiscing elit non primis cum nisi etiam magna
-      faucibus curabitur lectus mi malesuada ultrices."
-  />
+  >
+    <p>
+      Focused on HTML, CSS, C#.NET, Javascript, PHP, SQL, ASP.NET, Objective C technologies. Took
+      courses focusing on Project Management, System Analysis & Design, Software & Quality Testing
+      and Object Oriented Systems.
+    </p>
+  </Education>
 )
 
 export default PersonalEducation
