@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { media } from '../../styles'
 
 const SkillStyled = styled.div`
-  margin: 6px;
+  margin: 3px;
   padding: 8px;
   border: 1px solid #dcd9d9;
   border-radius: 5px;
@@ -14,6 +14,7 @@ const SkillStyled = styled.div`
 
   ${media.small`
     width: 160px;
+    margin: 6px;
     padding: 12px;
   `};
 `
