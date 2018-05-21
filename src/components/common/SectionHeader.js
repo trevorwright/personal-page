@@ -7,7 +7,7 @@ import { media } from '../../styles'
 const SectionHeaderStyled = styled.h2`
   position: relative;
   display: inline-block;
-  padding: 8px 0;
+  padding-bottom: 8px;
   margin-bottom: 20px;
   font-size: 1.5em;
   font-weight: 300;

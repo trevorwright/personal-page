@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { media } from '../../styles'
+import { media } from '../../../styles'
 
-import { LOCATIONS } from './constants'
-import NavigationItem from './NavigationItem'
+import { LOCATIONS } from '../constants'
+import DesktopItem from './DesktopItem'
 
 const NavigationStyled = styled.ul`
   display: none;
@@ -25,9 +25,9 @@ const NavigationStyled = styled.ul`
 const Navigation = () => (
   <NavigationStyled>
     {LOCATIONS.map(({ text, target }) => (
-      <NavigationItem key={target} target={target}>
+      <DesktopItem key={target} target={target}>
         {text}
-      </NavigationItem>
+      </DesktopItem>
     ))}
   </NavigationStyled>
 )

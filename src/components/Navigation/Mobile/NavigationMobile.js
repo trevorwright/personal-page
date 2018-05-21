@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faBars from '@fortawesome/fontawesome-free-solid/faBars'
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes'
-import { Link } from 'react-scroll'
 
-import { media } from '../../styles'
+import { media } from '../../../styles'
 
-import { LOCATIONS } from './constants'
+import { LOCATIONS } from '../constants'
+import MobileItem from './MobileItem'
 
 const NavigationMobileStyled = styled.button`
   float: right;
@@ -55,10 +55,6 @@ const MenuContentStyled = styled.ul`
   padding: 20px;
 `
 
-const MenuItemStyled = styled.ul`
-  margin: 26px 0;
-`
-
 class NavigationMobile extends Component {
   state = {
     menuOpen: false,
@@ -85,18 +81,9 @@ class NavigationMobile extends Component {
       </MenuHeaderStyled>
       <MenuContentStyled>
         {LOCATIONS.map(({ target, text }) => (
-          <Link
-            key={target}
-            to={target}
-            smooth
-            duration={500}
-            offset={-60}
-            onClick={this.toggleMenu}
-          >
-            <MenuItemStyled key={target} target={target}>
-              {text}
-            </MenuItemStyled>
-          </Link>
+          <MobileItem key={target} target={target} onClick={this.toggleMenu}>
+            {text}
+          </MobileItem>
         ))}
       </MenuContentStyled>
     </OpenMenuStyled>

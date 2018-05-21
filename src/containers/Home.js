@@ -4,6 +4,7 @@ import { withSiteData } from 'react-static'
 import { SectionHeader, PageSection, ImageBlurb } from '../components/common'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
+import ExperienceList from '../components/ExperienceList'
 
 import trevorImage from '../../assets/images/trevor-wright.png'
 
@@ -18,25 +19,44 @@ export default withSiteData(() => (
           Lorem ipsum dolor sit amet consectetur adipiscing elit, id fusce morbi aliquam ultrices
           nisi venenatis, proin potenti odio tincidunt tempus volutpat. Mus amet aliquet vehicula
           lacinia penatibus dui rhoncus nisi nostra viverra taciti adipiscing, id fermentum sem
-          faucibus facilisi maecenas inceptos euismod platea urna porttitor class, habitasse cursus
-          habitant tempor commodo aenean fusce erat gravida litora etiam. Dictum vehicula nulla
-          augue justo habitasse ac ad, elit suscipit at himenaeos nam ut pharetra ornare, aliquam
-          blandit commodo lectus aptent mauris.
-        </p>
-        <p>
-          Justo dolor scelerisque ultrices conubia arcu rutrum ornare leo cras egestas, litora
-          ligula in mollis inceptos rhoncus cursus fames class, porta risus vel nisl congue eu
-          dictum mus eget. Malesuada gravida blandit fringilla litora interdum, conubia nisl viverra
-          vehicula, taciti porttitor praesent leo. Dis velit netus consectetur adipiscing torquent
-          orci nam neque sociosqu, pharetra penatibus risus hendrerit integer tristique maecenas
-          magnis, malesuada lectus vulputate imperdiet sit dolor eleifend etiam. Viverra erat ac
-          natoque eleifend libero nisi arcu purus montes, nec habitasse proin integer velit bibendum
-          placerat facilisis, dictum penatibus massa vel lorem nulla ornare vehicula.
+          faucibus facilisi maecenas inceptos euismod platea urna porttitor class.
         </p>
       </ImageBlurb>
     </PageSection>
-    <PageSection name="experience">
+    <PageSection name="experience" theme="alt">
       <SectionHeader>Experience</SectionHeader>
+      <ExperienceList>
+        <ExperienceList.Entry
+          startDate="October 2017"
+          endDate="Current"
+          employer="Prodigy Game"
+          title="Specialization Lead"
+          description="Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet tincidunt sem convallis
+          auctor senectus quam vestibulum eleifend litora elementum orci condimentum eget himenaeos
+          fames sed rhoncus nunc nisi euismod nisl lacinia tristique arcu mauris leo phasellus
+          maecenas dictum viverra vivamus"
+        />
+        <ExperienceList.Entry
+          startDate="February 2017"
+          endDate="October 2017"
+          employer="Prodigy Game"
+          title="Full Stack Web Developer"
+          description="Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet tincidunt sem convallis
+          auctor senectus quam vestibulum eleifend litora elementum orci condimentum eget himenaeos
+          fames sed rhoncus nunc nisi euismod nisl lacinia tristique arcu mauris leo phasellus
+          maecenas dictum viverra vivamus"
+        />
+        <ExperienceList.Entry
+          startDate="May 2011"
+          endDate="February 2017"
+          employer="ABELSoft"
+          title="Full Stack Developer"
+          description="Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet tincidunt sem convallis
+          auctor senectus quam vestibulum eleifend litora elementum orci condimentum eget himenaeos
+          fames sed rhoncus nunc nisi euismod nisl lacinia tristique arcu mauris leo phasellus
+          maecenas dictum viverra vivamus"
+        />
+      </ExperienceList>
     </PageSection>
   </div>
 ))

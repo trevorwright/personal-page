@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import NavigationDesktop from './NavigationDesktop'
-import NavigationMobile from './NavigationMobile'
+import NavigationDesktop from './Desktop'
+import NavigationMobile from './Mobile'
 
 const HeaderStyled = styled.header`
   position: fixed;
