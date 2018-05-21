@@ -47,7 +47,9 @@ const SKILLS = [
 ]
 
 const WorkSkills = () => (
-  <Skills>{SKILLS.map(({ name, image }) => <Skills.Item name={name} image={image} />)}</Skills>
+  <Skills>
+    {SKILLS.map(({ name, image }) => <Skills.Item key={name} name={name} image={image} />)}
+  </Skills>
 )
 
 export default WorkSkills
