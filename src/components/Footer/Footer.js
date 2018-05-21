@@ -8,13 +8,18 @@ import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 
 import { media } from '../../styles'
 
-const FooterStyled = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
+const FooterStyled = styled.footer`
   padding: 16px 24px;
   background: #1976d2;
   color: #ffffff;
+`
+
+const FooterContentStyled = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1300px;
 
   ${media.small`
     flex-direction: row;
@@ -69,12 +74,14 @@ const renderIcon = (icon, href) => (
 
 const Footer = () => (
   <FooterStyled>
-    <CopyrightStyled>Copyright © 2018 Trevor Wright</CopyrightStyled>
-    <SocialMediaContainerStyled>
-      {renderIcon(faTwitter, 'https://twitter.com/tdwright_')}
-      {renderIcon(faInstagram, 'https://www.instagram.com/tdwright_/')}
-      {renderIcon(faLinkedin, 'https://www.linkedin.com/in/trevor-wright-81668769/')}
-    </SocialMediaContainerStyled>
+    <FooterContentStyled>
+      <CopyrightStyled>Copyright © 2018 Trevor Wright</CopyrightStyled>
+      <SocialMediaContainerStyled>
+        {renderIcon(faTwitter, 'https://twitter.com/tdwright_')}
+        {renderIcon(faInstagram, 'https://www.instagram.com/tdwright_/')}
+        {renderIcon(faLinkedin, 'https://www.linkedin.com/in/trevor-wright-81668769/')}
+      </SocialMediaContainerStyled>
+    </FooterContentStyled>
   </FooterStyled>
 )
 

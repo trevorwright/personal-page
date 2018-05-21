@@ -6,6 +6,8 @@ const SkillLayoutStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 1024px;
 `
 
 const Skills = ({ children }) => <SkillLayoutStyled>{children}</SkillLayoutStyled>
