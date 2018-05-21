@@ -15,8 +15,8 @@ export const LOCATIONS = [
     text: 'Education',
     target: 'education',
   },
-  {
-    text: 'Contact',
-    target: 'contact',
-  },
+  // {
+  //   text: 'Contact',
+  //   target: 'contact',
+  // },
 ]

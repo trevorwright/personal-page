@@ -26,7 +26,7 @@ const HeroStyled = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
-    background: #01579b;
+    background: #1976d2;
     opacity: 0.8;
   }
 

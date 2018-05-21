@@ -7,13 +7,14 @@ import Hero from '../components/Hero'
 import ExperienceList from '../components/ExperienceList'
 import Education from '../components/Education'
 import Skills from '../components/Skills'
+import Footer from '../components/Footer'
 
 import trevorImage from '../../assets/images/trevor-wright.png'
 
 export default withSiteData(() => (
   <div>
     <Navigation />
-    <Hero />
+    <Hero name="hero" />
     <PageSection name="about" title="About">
       <ImageBlurb image={trevorImage} alt="Profile Image of Trevor Wright">
         <p>
@@ -71,5 +72,6 @@ export default withSiteData(() => (
       faucibus curabitur lectus mi malesuada ultrices."
       />
     </PageSection>
+    <Footer />
   </div>
 ))
