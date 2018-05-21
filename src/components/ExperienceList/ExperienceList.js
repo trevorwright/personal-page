@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const ExperienceListStyled = styled.div`
   position: relative;
   margin: 0 auto;
+  max-width: 1024px;
 `
 
 const ExperienceList = ({ children }) => <ExperienceListStyled>{children}</ExperienceListStyled>

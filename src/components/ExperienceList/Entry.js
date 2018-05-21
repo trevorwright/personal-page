@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faCodeBranch from '@fortawesome/fontawesome-free-solid/faCodeBranch'
 
+import { media } from '../../styles'
+
 const EntryStyled = styled.div`
   position: relative;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   text-align: left;
   z-index: 5;
 
@@ -18,6 +20,31 @@ const EntryStyled = styled.div`
     width: 3px;
     background: #1976d2;
     z-index: -1;
+
+    ${media.medium`
+      left: 277px;
+    `};
+  }
+
+  ::after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    bottom: -30px;
+    left: 22px;
+    width: 3px;
+    background: #1976d2;
+    z-index: -1;
+
+    ${media.medium`
+      left: 277px;
+    `};
+  }
+
+  &:last-of-type {
+    ::after {
+      background: linear-gradient(to bottom, #1976d2, rgba(52, 152, 219, 0));
+    }
   }
 `
 
@@ -30,24 +57,54 @@ const EntryIconStyled = styled.div`
   height: 45px;
   border-radius: 50%;
   background: #1976d2;
+
+  ${media.medium`
+    margin-left: 255px;
+  `};
 `
 
 const EntryDetailsStyled = styled.div`
   margin-left: 60px;
+
+  ${media.medium`
+    margin: 0;
+  `};
 `
 
-const DateRangeStyled = styled.span``
+const DateRangeStyled = styled.span`
+  color: #757575;
+  font-weight: 300;
+
+  ${media.medium`
+    position: absolute;
+    left: 0;
+    top: 12px;
+    text-align: right;
+    width: 240px;
+  `};
+`
 
 const EntryCardStyled = styled.div`
   padding: 12px;
   background: #ffffff;
+
+  ${media.medium`
+    margin-left: 320px;
+  `};
 `
 
-const EmployerNameStyled = styled.h3``
+const EmployerNameStyled = styled.h3`
+  font-size: 1.5em;
+`
 
-const JobTitleStyled = styled.h4``
+const JobTitleStyled = styled.h4`
+  color: #757575;
+  font-weight: 300;
+`
 
-const JobDescriptionStyled = styled.p``
+const JobDescriptionStyled = styled.p`
+  margin-top: 12px;
+`
 
 const Entry = () => (
   <EntryStyled>
