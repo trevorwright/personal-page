@@ -8,15 +8,15 @@ export const LOCATIONS = [
     target: 'experience',
   },
   {
-    text: 'Education',
-    target: 'education',
-  },
-  {
     text: 'Skills',
     target: 'skills',
   },
   {
-    text: 'Contact',
-    target: 'contact',
+    text: 'Education',
+    target: 'education',
   },
+  // {
+  //   text: 'Contact',
+  //   target: 'contact',
+  // },
 ]
