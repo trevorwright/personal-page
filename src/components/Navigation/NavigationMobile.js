@@ -61,7 +61,7 @@ const MenuItemStyled = styled.ul`
 
 class NavigationMobile extends Component {
   state = {
-    menuOpen: true,
+    menuOpen: false,
   }
 
   toggleMenu = () => {

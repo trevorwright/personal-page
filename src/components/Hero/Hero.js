@@ -5,7 +5,7 @@ import { media } from '../../styles'
 
 import NamePlate from './NamePlate'
 
-import workspaceImage from '../../../assets/images/workspace.jpg'
+import workspaceImage from '../../../assets/images/workspace-min.jpg'
 
 const HeroStyled = styled.div`
   position: relative;
@@ -14,7 +14,6 @@ const HeroStyled = styled.div`
   align-items: center;
   background: url(${workspaceImage});
   background-size: cover;
-  background-position: -90px -200px;
   background-attachment: fixed;
   height: 80vh;
   min-height: 500px;
