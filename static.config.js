@@ -1,6 +1,14 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable react/prop-types, react/no-danger */
 import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
+
+const googleAnalytics = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119617889-1');
+`
 
 export default {
   getSiteData: () => ({
@@ -53,6 +61,9 @@ export default {
       return (
         <Html>
           <Head>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119617889-1" />
+            <script dangerouslySetInnerHTML={{ __html: googleAnalytics }} />
+
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
