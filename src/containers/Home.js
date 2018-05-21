@@ -1,7 +1,7 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 
-import { SectionHeader, PageSection, ImageBlurb } from '../components/common'
+import { PageSection, ImageBlurb } from '../components/common'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import ExperienceList from '../components/ExperienceList'
@@ -14,8 +14,7 @@ export default withSiteData(() => (
   <div>
     <Navigation />
     <Hero />
-    <PageSection name="about">
-      <SectionHeader>About Me</SectionHeader>
+    <PageSection name="about" title="About">
       <ImageBlurb image={trevorImage} alt="Profile Image of Trevor Wright">
         <p>
           Lorem ipsum dolor sit amet consectetur adipiscing elit, id fusce morbi aliquam ultrices
@@ -25,8 +24,7 @@ export default withSiteData(() => (
         </p>
       </ImageBlurb>
     </PageSection>
-    <PageSection name="experience" theme="alt">
-      <SectionHeader>Experience</SectionHeader>
+    <PageSection name="experience" title="Experience" theme="alt">
       <ExperienceList>
         <ExperienceList.Entry
           startDate="October 2017"
@@ -60,12 +58,10 @@ export default withSiteData(() => (
         />
       </ExperienceList>
     </PageSection>
-    <PageSection name="skills">
-      <SectionHeader>Skills</SectionHeader>
+    <PageSection name="skills" title="Skills">
       <Skills />
     </PageSection>
-    <PageSection name="education" theme="alt">
-      <SectionHeader>Education</SectionHeader>
+    <PageSection name="education" title="Education" theme="alt">
       <Education
         school="Mohawk College"
         startDate="January 2010"
