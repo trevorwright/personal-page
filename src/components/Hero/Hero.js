@@ -14,7 +14,6 @@ const HeroStyled = styled.div`
   align-items: center;
   background: url(${workspaceImage});
   background-size: cover;
-  background-attachment: fixed;
   height: 80vh;
   min-height: 500px;
   max-height: 1080px;
@@ -32,6 +31,7 @@ const HeroStyled = styled.div`
 
   ${media.small`
     background-position: bottom;
+    background-attachment: fixed;
   `};
 `
 
