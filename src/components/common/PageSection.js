@@ -4,6 +4,8 @@ import styled, { css } from 'styled-components'
 
 import { media } from '../../styles'
 
+import { SectionHeader } from '../common'
+
 const THEMES = {
   default: {
     background: '#FFFFFF',
@@ -23,22 +25,25 @@ const PageSectionStyled = styled.section`
   `};
 
   ${media.small`
-      padding: 20px 40px;
+      padding: 40px;
     `};
 `
 
-const PageSection = ({ children, ...rest }) => (
-  <PageSectionStyled {...rest}>{children}</PageSectionStyled>
+const PageSection = ({ title, children, ...rest }) => (
+  <PageSectionStyled {...rest}>
+    <SectionHeader>{title}</SectionHeader>
+    {children}
+  </PageSectionStyled>
 )
 
 PageSection.propTypes = {
+  title: string.isRequired,
   children: node.isRequired,
-  name: string,
+  name: string.isRequired,
   theme: oneOf(['default', 'alt']),
 }
 
 PageSection.defaultProps = {
-  name: undefined,
   theme: 'default',
 }
 

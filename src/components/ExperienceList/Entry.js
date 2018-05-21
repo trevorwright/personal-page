@@ -1,5 +1,5 @@
 import React from 'react'
-import { string } from 'prop-types'
+import { string, node } from 'prop-types'
 import styled from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faCodeBranch from '@fortawesome/fontawesome-free-solid/faCodeBranch'
@@ -72,9 +72,10 @@ const EntryDetailsStyled = styled.div`
   `};
 `
 
-const DateRangeStyled = styled.span`
+const DateRangeStyled = styled.div`
   color: #757575;
   font-weight: 300;
+  margin-bottom: 8px;
 
   ${media.medium`
     position: absolute;
@@ -88,6 +89,8 @@ const DateRangeStyled = styled.span`
 const EntryCardStyled = styled.div`
   padding: 12px;
   background: #ffffff;
+  border: 1px solid #dcd9d9;
+  border-radius: 5px;
 
   ${media.medium`
     margin-left: 320px;
@@ -103,12 +106,16 @@ const JobTitleStyled = styled.h4`
   font-weight: 300;
 `
 
-const JobDescriptionStyled = styled.p`
+const JobDescriptionStyled = styled.div`
   margin-top: 12px;
+
+  & > *:not(:first-child) {
+    margin-top: 12px;
+  }
 `
 
 const Entry = ({
-  startDate, endDate, employer, title, description,
+  startDate, endDate, employer, title, children,
 }) => (
   <EntryStyled>
     <EntryIconStyled>
@@ -121,7 +128,9 @@ const Entry = ({
       <EntryCardStyled>
         <EmployerNameStyled>{employer}</EmployerNameStyled>
         <JobTitleStyled>{title}</JobTitleStyled>
-        <JobDescriptionStyled>{description}</JobDescriptionStyled>
+        <JobDescriptionStyled>
+          {typeof children === 'string' ? <p>{children}</p> : children}
+        </JobDescriptionStyled>
       </EntryCardStyled>
     </EntryDetailsStyled>
   </EntryStyled>
@@ -132,7 +141,7 @@ Entry.propTypes = {
   endDate: string.isRequired,
   employer: string.isRequired,
   title: string.isRequired,
-  description: string.isRequired,
+  children: node.isRequired,
 }
 
 export default Entry

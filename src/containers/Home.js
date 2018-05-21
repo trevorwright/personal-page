@@ -1,62 +1,31 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 
-import { SectionHeader, PageSection, ImageBlurb } from '../components/common'
+import { PageSection } from '../components/common'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
-import ExperienceList from '../components/ExperienceList'
-
-import trevorImage from '../../assets/images/trevor-wright.png'
+import About from '../Sections/About'
+import WorkSkills from '../Sections/WorkSkills'
+import WorkExperience from '../Sections/WorkExperience'
+import PersonalEducation from '../Sections/PersonalEducation'
+import Footer from '../components/Footer'
 
 export default withSiteData(() => (
   <div>
     <Navigation />
-    <Hero />
-    <PageSection name="about">
-      <SectionHeader>About Me</SectionHeader>
-      <ImageBlurb image={trevorImage} alt="Profile Image of Trevor Wright">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit, id fusce morbi aliquam ultrices
-          nisi venenatis, proin potenti odio tincidunt tempus volutpat. Mus amet aliquet vehicula
-          lacinia penatibus dui rhoncus nisi nostra viverra taciti adipiscing, id fermentum sem
-          faucibus facilisi maecenas inceptos euismod platea urna porttitor class.
-        </p>
-      </ImageBlurb>
+    <Hero name="hero" />
+    <PageSection name="about" title="About">
+      <About />
     </PageSection>
-    <PageSection name="experience" theme="alt">
-      <SectionHeader>Experience</SectionHeader>
-      <ExperienceList>
-        <ExperienceList.Entry
-          startDate="October 2017"
-          endDate="Current"
-          employer="Prodigy Game"
-          title="Specialization Lead"
-          description="Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet tincidunt sem convallis
-          auctor senectus quam vestibulum eleifend litora elementum orci condimentum eget himenaeos
-          fames sed rhoncus nunc nisi euismod nisl lacinia tristique arcu mauris leo phasellus
-          maecenas dictum viverra vivamus"
-        />
-        <ExperienceList.Entry
-          startDate="February 2017"
-          endDate="October 2017"
-          employer="Prodigy Game"
-          title="Full Stack Web Developer"
-          description="Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet tincidunt sem convallis
-          auctor senectus quam vestibulum eleifend litora elementum orci condimentum eget himenaeos
-          fames sed rhoncus nunc nisi euismod nisl lacinia tristique arcu mauris leo phasellus
-          maecenas dictum viverra vivamus"
-        />
-        <ExperienceList.Entry
-          startDate="May 2011"
-          endDate="February 2017"
-          employer="ABELSoft"
-          title="Full Stack Developer"
-          description="Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet tincidunt sem convallis
-          auctor senectus quam vestibulum eleifend litora elementum orci condimentum eget himenaeos
-          fames sed rhoncus nunc nisi euismod nisl lacinia tristique arcu mauris leo phasellus
-          maecenas dictum viverra vivamus"
-        />
-      </ExperienceList>
+    <PageSection name="experience" title="Experience" theme="alt">
+      <WorkExperience />
     </PageSection>
+    <PageSection name="skills" title="Skills">
+      <WorkSkills />
+    </PageSection>
+    <PageSection name="education" title="Education" theme="alt">
+      <PersonalEducation />
+    </PageSection>
+    <Footer />
   </div>
 ))
