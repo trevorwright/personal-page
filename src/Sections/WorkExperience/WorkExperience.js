@@ -13,11 +13,11 @@ const WorkExperience = () => (
       <p>
         Work as apart of a team to continually deliver high quality and high impact features for our
         customers using modern technologies such as React, Styled-Components, Webpack, Babel,
-        Apollo, GraphQL and Apollo.
+        GraphQL and Apollo.
       </p>
       <p>
-        Lead the transition of products from BackboneJS to React and continue to lead our front-end
-        initiatives.
+        Leading the transition of products from BackboneJS to React and front-end initiatives
+        including patterns, technology and team education.
       </p>
       <p>
         Lead direct reports with communication, coaching, mentorship, career development, regular 1
