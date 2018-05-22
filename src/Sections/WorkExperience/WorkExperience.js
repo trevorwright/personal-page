@@ -11,8 +11,8 @@ const WorkExperience = () => (
       title="Specialization Lead"
     >
       <p>
-        Work as apart of a team to continually deliver high quality and high impact features for our
-        customers using modern technologies such as React, Styled-Components, Webpack, Babel,
+        Working as apart of a team to continually deliver high quality and high impact features for
+        our customers using modern technologies such as React, Styled-Components, Webpack, Babel,
         GraphQL and Apollo.
       </p>
       <p>
@@ -20,8 +20,8 @@ const WorkExperience = () => (
         including patterns, technology and team education.
       </p>
       <p>
-        Lead direct reports with communication, coaching, mentorship, career development, regular 1
-        on 1 meetings and performance reviews.
+        Managing direct reports with communication, coaching, mentorship, career development,
+        regular 1 on 1 meetings and performance reviews.
       </p>
     </ExperienceList.Entry>
     <ExperienceList.Entry
@@ -54,7 +54,7 @@ const WorkExperience = () => (
       </p>
       <p>
         Developed desktop solutions for both Medical and Dental products with Microsoft technologies
-        (C#, C++, WPF, MySQL). Kept team organized and on track with project tasks. Handled bugs as
+        (C#, C++, WPF, MS SQL). Kept team organized and on track with project tasks. Handled bugs as
         well as customer issues and requests.
       </p>
     </ExperienceList.Entry>
