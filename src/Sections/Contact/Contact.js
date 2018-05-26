@@ -10,17 +10,17 @@ class Contact extends Component {
     name: '',
     email: '',
     message: '',
+    'bot-field': '',
     submitted: false,
   }
 
   handleSubmit = (event) => {
-    const { name, email, message } = this.state
-    const fields = { name, email, message }
+    event.preventDefault()
     // eslint-disable-next-line
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...fields }),
+      body: encode({ 'form-name': event.target.getAttribute('name'), ...this.state }),
     }).then(() => {
       this.setState({
         name: '',
@@ -29,8 +29,6 @@ class Contact extends Component {
         submitted: true,
       }).catch(() => console.error('An error occured'))
     })
-
-    event.preventDefault()
   }
 
   handleFieldChange = event => this.setState({ [event.target.name]: event.target.value })
@@ -44,7 +42,16 @@ class Contact extends Component {
     }
 
     return (
-      <form name="contact" onSubmit={this.handleSubmit} data-netlify="true">
+      <form
+        name="contact"
+        onSubmit={this.handleSubmit}
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <label>
+          Check <input name="bot-field" onChange={this.handleChange} />
+        </label>
         <label>
           Name
           <input type="text" name="name" value={name} onChange={this.handleFieldChange} />
