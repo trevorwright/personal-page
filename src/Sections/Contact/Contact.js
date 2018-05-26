@@ -49,7 +49,7 @@ class Contact extends Component {
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <label>
+        <label style={{ display: 'none' }}>
           Check <input name="bot-field" onChange={this.handleChange} />
         </label>
         <label>

@@ -6,5 +6,15 @@ module.exports = {
     'import/prefer-default-export': 0,
     semi: 0,
     'jsx-a11y/anchor-is-valid': 0,
+    'jsx-a11y/label-has-for': [
+      2,
+      {
+        components: ['Label'],
+        required: {
+          some: ['nesting', 'id'],
+        },
+        allowChildren: false,
+      },
+    ],
   },
 }
