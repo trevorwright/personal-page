@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types, react/no-danger */
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 const googleAnalytics = `
@@ -44,25 +44,33 @@ export default {
         component: 'src/containers/404',
       },
     ],
-  renderToHtml: (render, Comp, meta) => {
+  renderToHtml: (render, Comp, meta, webpackStats) => {
     const sheet = new ServerStyleSheet()
     const html = render(sheet.collectStyles(<Comp />))
-    // eslint-disable-next-line
+    /* eslint-disable no-param-reassign */
     meta.styleTags = sheet.getStyleElement()
+    meta.productionBuild = !!webpackStats
+    /* eslint-enable */
     return html
   },
   // eslint-disable-next-line
   Document: class CustomHtml extends Component {
     render() {
+      /* eslint-disable react/prop-types */
       const {
         Html, Head, Body, children, renderMeta,
       } = this.props
+      /* eslint-enable */
 
       return (
         <Html>
           <Head>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119617889-1" />
-            <script dangerouslySetInnerHTML={{ __html: googleAnalytics }} />
+            {renderMeta.productionBuild && (
+              <Fragment>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119617889-1" />
+                <script dangerouslySetInnerHTML={{ __html: googleAnalytics }} />
+              </Fragment>
+            )}
 
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
