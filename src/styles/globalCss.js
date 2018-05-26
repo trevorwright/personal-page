@@ -161,4 +161,8 @@ export default css`
     background-color: #fff;
     color: #424242;
   }
+
+  input {
+    color: #424242;
+  }
 `
