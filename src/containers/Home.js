@@ -8,6 +8,7 @@ import About from '../Sections/About'
 import WorkSkills from '../Sections/WorkSkills'
 import WorkExperience from '../Sections/WorkExperience'
 import PersonalEducation from '../Sections/PersonalEducation'
+import Contact from '../Sections/Contact'
 import Footer from '../components/Footer'
 
 export default withSiteData(() => (
@@ -26,6 +27,9 @@ export default withSiteData(() => (
     <PageSection name="education" title="Education" theme="alt">
       <PersonalEducation />
     </PageSection>
+    {/* <PageSection name="contact" title="contact">
+      <Contact />
+    </PageSection> */}
     <Footer />
   </div>
 ))
