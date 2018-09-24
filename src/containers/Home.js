@@ -27,9 +27,9 @@ export default withSiteData(() => (
     <PageSection name="education" title="Education" theme="alt">
       <PersonalEducation />
     </PageSection>
-    {/* <PageSection name="contact" title="contact">
+    <PageSection name="contact" title="contact">
       <Contact />
-    </PageSection> */}
+    </PageSection>
     <Footer />
   </div>
 ))
