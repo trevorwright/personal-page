@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
-import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
+// import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
+// import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 
 import { media } from '../../styles'
 
@@ -75,11 +75,16 @@ const renderIcon = (icon, href) => (
 const Footer = () => (
   <FooterStyled>
     <FooterContentStyled>
-      <CopyrightStyled>Copyright © 2018 Trevor Wright</CopyrightStyled>
+      <CopyrightStyled>
+        Copyright © {new Date().getFullYear()} Trevor Wright
+      </CopyrightStyled>
       <SocialMediaContainerStyled>
-        {renderIcon(faTwitter, 'https://twitter.com/tdwright_')}
-        {renderIcon(faInstagram, 'https://www.instagram.com/tdwright_/')}
-        {renderIcon(faLinkedin, 'https://www.linkedin.com/in/trevor-wright-81668769/')}
+        {/* {renderIcon(faTwitter, 'https://twitter.com/tdwright_')}
+        {renderIcon(faInstagram, 'https://www.instagram.com/tdwright_/')} */}
+        {renderIcon(
+          faLinkedin,
+          'https://www.linkedin.com/in/trevor-wright-81668769/'
+        )}
       </SocialMediaContainerStyled>
     </FooterContentStyled>
   </FooterStyled>
