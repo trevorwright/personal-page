@@ -1,29 +1,55 @@
 import React from 'react'
-
 import ExperienceList from '../../components/ExperienceList'
 
 const WorkExperience = () => (
   <ExperienceList>
     <ExperienceList.Entry
-      startDate="December 2019"
+      startDate="June 2021"
       endDate="Current"
-      employer="Prodigy Game"
-      title="Engineering Manager & Domain Lead"
+      employer="Prodigy Education"
+      title="Front-End Architect"
     >
       <p>
-        Work closely with product and design leads to define and lead our
-        educator platforms. Technically lead and mentor multiple teams which are
-        responsible for feature delivery in a collection of our systems.
+        Working with the architecture team to develop broader technical
+        direction across the company. We ensure secure and scalable solutions as
+        well as work to set standards and best practices all our products.
       </p>
+      <div>Own the companies internal design-system:</div>
+      <ul>
+        <li>Being the resident React expert</li>
+        <li>Coaching and mentoring team members across the company</li>
+        <li>Ensuring a light weight and highly composable component library</li>
+        <li>Providing appropriate tooling to teams for rapid execution</li>
+        <li>Driving accessibility across our products</li>
+        <li>Building a inner source community around the design-system</li>
+      </ul>
+    </ExperienceList.Entry>
+    <ExperienceList.Entry
+      startDate="December 2019"
+      endDate="July 2021"
+      employer="Prodigy Education"
+      title="Sr. Engineering Manager & Domain Lead"
+    >
       <p>
-        Managing direct reports who are both individual contributors as well as
-        managers, providing training and mentorship.
+        Worked closely with product and design leads to set the direction of our
+        educator platforms by setting direction, prioritization, planning and
+        execution. Lead up to 4 product teams in a technical along with people
+        management which included managing both individual contributors and
+        other managers.
       </p>
+      <div>Key highlights:</div>
+      <ul>
+        <li>Technically led rebranding the company and all products</li>
+        <li>Launched internal design-system</li>
+        <li>Supported launch of co-op program</li>
+        <li>Launched accelerator program</li>
+        <li>Ran internal front-end meetups</li>
+      </ul>
     </ExperienceList.Entry>
     <ExperienceList.Entry
       startDate="October 2017"
       endDate="December 2019"
-      employer="Prodigy Game"
+      employer="Prodigy Education"
       title="Specialization Lead"
     >
       <p>
@@ -32,8 +58,9 @@ const WorkExperience = () => (
         React, Styled-Components, Webpack, Babel, GraphQL and Apollo.
       </p>
       <p>
-        Leading the transition of products from BackboneJS to React and
-        front-end initiatives including patterns, technology and team education.
+        Leading the transition of products from BackboneJS to React along with
+        front-end initiatives including patterns, best practices and team
+        education.
       </p>
       <p>
         Managing direct reports with communication, coaching, mentorship, career
@@ -43,7 +70,7 @@ const WorkExperience = () => (
     <ExperienceList.Entry
       startDate="February 2017"
       endDate="October 2017"
-      employer="Prodigy Game"
+      employer="Prodigy Education"
       title="Full Stack Web Developer & Scrum Master"
     >
       <p>

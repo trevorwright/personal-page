@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
-import { media } from '../../styles'
+import { media } from "../../styles"
 
 const NamePlateStyled = styled.div`
   text-align: center;
@@ -33,8 +33,7 @@ const TitleStyled = styled.h3`
 const NamePlate = ({ ...rest }) => (
   <NamePlateStyled {...rest}>
     <NameStyled>Trevor Wright</NameStyled>
-    <TitleStyled>Specialization Lead</TitleStyled>
-    <TitleStyled>Full Stack Web Developer</TitleStyled>
+    <TitleStyled>Front-End Architect</TitleStyled>
   </NamePlateStyled>
 )
 
